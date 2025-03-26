@@ -1,0 +1,918 @@
+<transformation>
+  <info>
+    <name>cas_customer</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <directory>/DEPOSIT</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <size_limit_lines/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2024/12/02 16:54:58.473</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2024/12/02 16:56:04.582</modified_date>
+    <key_for_session_key/>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>DV_CAS</name>
+    <server>localhost</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>cas</database>
+    <port>3306</port>
+    <username>ewcn</username>
+    <password>Encrypted 2be98afc826e8b3aa8b0aab608cc2fe82</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>EXTRA_OPTION_MYSQL.characterEncoding</code>
+        <attribute>utf8</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MYSQL.defaultFetchSize</code>
+        <attribute>500</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MYSQL.useCursorFetch</code>
+        <attribute>true</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>3306</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>STREAM_RESULTS</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>DVLOANDS</name>
+    <server>localhost</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>dvloans</database>
+    <port>3306</port>
+    <username>ewcn</username>
+    <password>Encrypted 2be98afc826e8b3aa8b0aab608cc2fe82</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>EXTRA_OPTION_MYSQL.characterEncoding</code>
+        <attribute>utf8</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MYSQL.defaultFetchSize</code>
+        <attribute>500</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MYSQL.useCursorFetch</code>
+        <attribute>true</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>3306</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>STREAM_RESULTS</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>表输入</from>
+      <to>表输出</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>表输入</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>DVLOANDS</connection>
+    <sql>select row_number() over (order by xx.client)               as id,
+       xx.version                                           as version,
+       xx.create_user                                       as create_user,
+       DATE_FORMAT(xx.create_time, '%Y-%m-%d 00:00:00')     as create_time,
+       xx.change_user                                       as change_user,
+       DATE_FORMAT(xx.change_time, '%Y-%m-%d 00:00:00')     as change_time,
+       xx.org                                               as org,
+       xx.active                                            as active,
+       xx.client                                            as client,
+       xx.client_type                                       as client_type,
+       xx.name                                              as name,
+       xx.client_org                                        as client_org,
+       xx.id_type                                           as id_type,
+       xx.id_code                                           as id_code,
+       xx.shore_flag                                        as shore_flag,
+       xx.rm                                                as rm,
+       xx.address                                           as address,
+       xx.industry_20                                       as industry_20,
+       xx.industry_96                                       as industry_96,
+       xx.industry_1024                                     as industry_1024,
+       xx.mail_address                                      as mail_address,
+       xx.ln_class                                          as ln_class,
+       xx.inner_ln_class                                    as inner_ln_class,
+       xx.area_ln_class                                     as area_ln_class,
+       DATE_FORMAT(xx.birth, '%Y-%m-%d 00:00:00')           as birth,
+       xx.swift_name                                        as swift_name,
+       xx.personal                                          as personal,
+       ' '                                                  as gender,
+       xx.country                                           as country,
+       xx.province                                          as province,
+       xx.city                                              as city,
+       xx.staff                                             as staff,
+       DATE_FORMAT(xx.accopen_date, '%Y-%m-%d 00:00:00')    as accopen_date,
+       xx.acudbu                                            as acudbu,
+       xx.department                                        as department,
+       xx.group_client                                      as group_client,
+       xx.group_name                                        as group_name,
+       xx.customer_flag                                     as customer_flag,
+       DATE_FORMAT(xx.class_date, '%Y-%m-%d 00:00:00')      as class_date,
+       xx.class_reason                                      as class_reason,
+       xx.marital_status                                    as marital_status,
+       xx.spouse_name                                       as spouse_name,
+       xx.spouse_idtype                                     as spouse_idtype,
+       xx.spouse_id                                         as spouse_id,
+       xx.asset_ccy                                         as asset_ccy,
+       xx.asset_amt                                         as asset_amt,
+       DATE_FORMAT(xx.nxt_review_date, '%Y-%m-%d 00:00:00') as nxt_review_date,
+       xx.scale                                             as scale,
+       xx.net_assets                                        as net_assets,
+       xx.group_belong                                      as group_belong,
+       xx.id_type_input                                     as id_type_input,
+       xx.state                                             as state,
+       xx.client_sub_flag                                   as client_sub_flag,
+       xx.head_office_rm                                    as head_office_rm
+from (select 0                                             as id,
+             1                                             as version,
+             A.INPUSER                                     as create_user,
+             if(A.ADATE = ' ', e.procdat, a.ADATE)         as create_time,
+             A.INPUSER                                     as change_user,
+             if(A.ADATE = ' ', e.procdat, a.ADATE)         AS change_time,
+             A.BCHID                                       as org,
+             1                                             as active,
+             a.CUSTCD                                      as client,
+             c.LNCUSTP                                     as client_type,
+             a.CUFULNM                                     as name,
+             a.BCHID                                       as client_org,
+             a.IDCODE                                      as id_type,
+             A.BRAIDID                                     as id_code,
+             c.INTTYPE                                     as shore_flag,
+             a.DEPTYPE                                     as rm,
+             concat(a.CUSADD1, a.CUSADD2, a.CUSADD3)       as address,
+             d.a_occtype_20                                as industry_20,
+             d.a_occtype_code_96_input                     as industry_96,
+             d.a_occtype_code_1424_input                   as industry_1024,
+             concat(a.MAILAD1, a.MAILAD2, a.MAILAD3)       as mail_address,
+             trim(a.ACCLASS)                               as ln_class,
+             trim(a.ACCLASS)                               as inner_ln_class,
+             case
+                 when a.ACCLASS &lt;= 5 then 1
+                 when a.ACCLASS = 6 then 2
+                 when a.ACCLASS in (7, 8) then 3
+                 when a.ACCLASS = 9 then 4
+                 when a.ACCLASS = 10 then 5
+                 end                                       as area_ln_class,
+             if(a.ACOPNDT = '0', null, a.ACOPNDT)          as birth,
+             a.SWIFTAD                                     as swift_name,
+             c.PSNCUSF                                     as personal,
+             a.CORCOUN                                     as country,
+             ''                                            as province,
+             a.city                                        as city,
+             a.STAFFIN                                     as staff,
+             if(a.ACOPNDT = '0', null, a.ACOPNDT)          as accopen_date,
+             a.DBUACU                                      as acudbu,
+             a.DEPTYPE                                     as department,
+             a.CUSTGRP                                     as group_client,
+             a.GRPNAME                                     as group_name,
+             'I'                                           as customer_flag,
+             a.CLASSDT                                     as class_date,
+             ''                                            as class_reason,
+             ''                                            as marital_status,
+             ''                                            as spouse_name,
+             ''                                            as spouse_idtype,
+             ''                                            as spouse_id,
+             case
+                 when length(d.a_op_biz_ccy) > 3
+                     then substr(d.a_op_biz_ccy, 1, 3) end as asset_ccy,
+             d.a_op_asset                                  as asset_amt,
+             a.NXTRVDT                                     as nxt_review_date,
+
+             case
+                 when d.cif_size = '微型' then 0
+                 when d.cif_size = '小型' then 1
+                 when d.cif_size = '中型' then 2
+                 when d.cif_size = '大型'
+                     then 3 end                            as scale,
+             d.a_op_asset                                  as net_assets,
+             a.GRPNAME                                     as group_belong,
+             ''                                            as id_type_input,
+             a.CORCOUN                                     as state,
+             CASE
+                 WHEN c.PSNCUSF = 'Y' THEN 'Normal'
+                 WHEN c.PSNCUSF = 'N' AND c.LNCUSTP IN ('A', 'B', 'L', 'M') THEN 'Normal'
+                 ELSE 'NBFI'
+                 END                                       as client_sub_flag,
+             a.accofr                                      as head_office_rm
+      from taibs.hkbbimas_all a
+               left join taibs.hkbtymas c
+                         on a.CUSTCD = c.CUSTCD
+               left join (select *
+                          from taibs.oms_customer_profile_size_2
+                          where id in (select max(id) as id
+                                       from taibs.oms_customer_profile_size_2
+                                       where a_customer_code is not null
+                                       group by a_customer_code
+                                       having count(1) = 1)) d on a.CUSTCD = d.a_customer_code
+               left join taibs.msprodat e on 1 = 1
+      where c.PSNCUSF in ('Y', 'N')
+
+      union all
+      --  行外客户
+-- cas_customer
+      select id                                          as id,
+             0                                           as version,
+             A.UPDATE_USER                               as create_user,
+             A.UPDATE_DATE                               as create_time,
+             A.UPDATE_USER                               as change_user,
+             A.UPDATE_DATE                               AS change_time,
+             A.BRANCH                                    as org,
+             1                                           as active,
+             A.CIFCODE                                   as client,
+             case
+                 when `FOREIGN` = 'D' then
+                     case
+                         when psnflag = 1 then ' '
+                         else 'A' end
+                 else
+                     case
+                         when psnflag = 1 then ' '
+                         else 'M' end
+                 end                                     as client_type,
+             A.CIFNAME                                   as name,
+             A.BRANCH                                    as client_org,
+             case
+                 when a.`psnflag` = 1
+                     then
+                     case IDTYPE
+                         when '居民身份证及其他以公民身份证号为标识的证件' then 'L'
+                         when 'Certificate of Incorporation' then '4'
+                         when '其他注册证明' then '5'
+                         when '护照' then '6'
+                         when '港澳居民来往内地通行证' then 'E'
+                         when '香港身份证' then 'M'
+                         else 'G'
+                         end
+                 else case
+                          when a.FOREIGN = 'D' then
+                              'K'
+                          when a.FOREIGN = 'F' then
+                              case
+                                  when IDTYPE = '居民身份证及其他以公民身份证号为标识的证件' then 'L'
+                                  when IDTYPE = 'Certificate of Incorporation' then '4'
+                                  when IDTYPE = '其他注册证明' then '5'
+                                  when IDTYPE = '护照' then '6'
+                                  when IDTYPE = '港澳居民来往内地通行证' then 'E'
+                                  when IDTYPE = '香港身份证' then 'M'
+                                  else 'G'
+                                  end
+                     end
+                 end                                     as id_type,
+
+             case
+                 when a.`psnflag` = 1
+                     then
+                     A.IDNUM
+                 else case
+                          when a.FOREIGN = 'D' then
+                              credit_no1
+                          when a.FOREIGN = 'F' then
+                              a.IDNUM
+                     end
+                 end                                     as id_code,
+             a.FOREIGN                                   as shore_flag,
+             ''                                          as rm,
+             ''                                          as address,
+             case
+                 when substr(REMARK1, 1, 2) != '确认' and length(REMARK1) > 0 and
+                      substr(REMARK1, 1, 1) REGEXP '[A-Z]' then substr(REMARK1, 1, 1)
+                 when substr(REMARK1, 1, 2) != '确认' and length(REMARK1) > 3
+                     then substr(REMARK1, 2, 2) end      as industry_20,
+             null                                        as industry_96,
+             null                                        as industry_1024,
+             null                                        as mail_address,
+             null                                        as ln_class,
+             null                                        as inner_ln_class,
+             null                                        as area_ln_class,
+             case
+                 when a.`psnflag` = 1 then if(A.IDNUM is not null, date_format(substr(A.IDNUM, 7, 8), '%Y-%m-%d'), null)
+                 else null end                           as birth,
+             null                                        as swift_name,
+             case when psnflag = 1 then 'Y' else 'N' end as personal,
+             REMARK3                                     as country,
+             null                                        as province,
+             null                                        as city,
+             null                                        as staff,
+             if(A.IDNUM is not null, date_format(substr(A.IDNUM, 7, 8), '%Y-%m-%d'),
+                null)                                    as accopen_date,
+             null                                        as acudbu,
+             null                                        as department,
+             null                                        as group_client,
+             null                                        as group_name,
+             'O'                                         as customer_flag,
+             UPDATE_DATE                                 as class_date,
+             ''                                          as class_reason,
+             ''                                          as marital_status,
+             ''                                          as spouse_name,
+             ''                                          as spouse_idtype,
+             ''                                          as spouse_id,
+             NETASSETCCY                                 as asset_ccy,
+             NETASSET                                    as asset_amt,
+             ''                                          as nxt_review_date,
+             case
+                 when REMARK2 = '微型' then 0
+                 when REMARK2 = '小型' then 1
+                 when REMARK2 = '中型' then 2
+                 when REMARK2 = '大型'
+                     then 3 end                          as scale,
+             NETASSET                                    as net_assets,
+             ''                                          as group_belong,
+             ''                                          as id_type_input,
+             REMARK3                                     as state,
+             'Normal'                                    as client_sub_flag,
+             null                                        as head_office_rm
+      from dvloans.special_cif a
+      where REC_STATUS = 'A'
+        and a.CIFCODE is not null) xx;
+				
+				</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta/>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>569</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>表输出</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>DV_CAS</connection>
+    <schema/>
+    <table>cas_customer</table>
+    <commit>${COMMIT_LINES}</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>825</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+  <attributes/>
+</transformation>
